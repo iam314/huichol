@@ -1,0 +1,373 @@
+// Custom variables
+@import "normalize";
+@import "grid";
+@import "variables";
+
+@font-face {
+  font-family: 'Qanelas-Regular';
+  src: url(../fonts/Qanelas-Regular.eot);
+  src: url(../fonts/Qanelas-Regular.eot?#iefix)
+  format("embedded-opentype"), url(../fonts/Qanelas-Regular.woff)
+  format("woff"), url(../fonts/Qanelas-Regular.ttf)
+  format("truetype"), url(../fonts/Qanelas-Regular.svg#Qanelas-Regular)
+  format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  font-smoothing: antialiased;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Qanelas-Regular', sans-serif;
+  letter-spacing: 0.03em;
+  text-rendering: optimizeLegibility;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.mainimage {
+  position: fixed;
+}
+.featureimage {
+  margin: 0 auto;
+}
+.mainsection {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 804px;
+  z-index: -999;
+  display: block;
+
+animation: colorchange 25s infinite; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 25s infinite; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+{
+  0%   {background: $color-red;}
+  17%  {background: $color-orange;}
+  32%  {background: $color-yellow;}
+  47%  {background: $color-green;}
+  52%  {background: $color-lightblue;}
+  77%  {background: $color-blue;}
+  100% {background: $color-red;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: $color-red;}
+  17%  {background: $color-orange;}
+  32%  {background: $color-yellow;}
+  47%  {background: $color-green;}
+  52%  {background: $color-lightblue;}
+  77%  {background: $color-blue;}
+  100% {background: $color-red;}
+}
+
+.logo, .logotype {
+  width: 8.4em;
+  height: auto;
+  display: block;
+}
+
+.logo {
+  margin-top: 7.2em;
+}
+.logotype {
+  margin-top: 9.6em;
+  margin-bottom: 3.6em;
+}
+.widthcontrol {
+  max-width: 333px;
+}
+.features {
+  background-color: $color-gray;
+  margin-top: 804px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px -2px 6px 0px rgba(56,52,56,0.51);
+  -moz-box-shadow: 0px -2px 6px 0px rgba(56,52,56,0.51);
+  box-shadow: 0px -2px 6px 0px rgba(56,52,56,0.51);
+}
+
+.featurestxt {
+  color: $color-black;
+  font-size: 21px;
+  line-height: 130%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.featurebox {
+  margin-top: 96px;
+  margin-bottom: 48px;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(184,171,184,0.9);
+-moz-box-shadow: 0px 2px 5px 0px rgba(184,171,184,0.9);
+box-shadow: 0px 2px 5px 0px rgba(184,171,184,0.9);
+}
+
+.footer {
+  background-color: $color-white;
+}
+.footerlinks {
+  color: $color-blue;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+
+.footerlinks:hover {
+  color: darken($color-blue, 35%);
+}
+
+.footerlogo {
+    width: 8.4em;
+    height: auto;
+    display: block;
+    margin: 90px auto 18px auto;
+}
+.center {
+  margin: 0 auto;
+}
+.useit{
+  color: $color-black;
+  text-align: center;
+}
+.space {
+  height: 72px;
+}
+.support {
+  color: $color-black;
+  text-align: center;
+}
+
+.hidedisplay {
+  display: none !important;
+}
+.displaymiddle {
+  display: none;
+}
+
+//TYPOGRAPHIE
+h1 {
+  font-family: 'Qanelas-Regular', sans-serif;
+  font-size: 4.8em;
+  // line-height: 140%;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 12px;
+  color: $color-white;
+}
+
+h2 {
+  font-family: 'Qanelas-Regular', sans-serif;
+  font-size: 3.6em;
+  line-height: 140%;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  margin-top: 46px;
+  padding-bottom: 12px;
+  color: $color-black;
+}
+
+p {
+  font-family: 'Qanelas-Regular', sans-serif;
+  font-size: 1.8em;
+	line-height: 145%;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 24px;
+  color: $color-white;
+}
+
+.copyright {
+  font-family: 'Qanelas-Regular', sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+  line-height: 145%;
+  text-rendering: optimizeLegibility;
+  padding-bottom: 24px;
+  color: #c5c7c9;
+}
+
+.center_txt {
+  text-align: center;
+}
+
+// BUTTONS AND LINKS
+.flinks {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 10px;
+  // color: $color-darkgray;
+  text-decoration: none;
+  transition: all 100ms ease-in-out;
+}
+
+.flinks:hover {
+  // color: darken($color-white, 25%);
+}
+
+@media screen and (max-width: 1232px) {
+  .mainsection {
+    height: 683px;
+  }
+  .features {
+    margin-top: 683px;
+  }
+}
+@media screen and (max-width: 1231px) {
+  .widthcontrol {
+    max-width: 248px;
+  }
+}
+@media screen and (max-width: 1217px) {
+  .logotype {
+    margin-top: 7.2em;
+  }
+}
+@media screen and (max-width: 1031px) {
+  .mainimage {
+    margin-top: -4px;
+  }
+  .widthcontrol {
+    max-width: 220px;
+  }
+  .featurestxt {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1029px) {
+  .hidemiddle {
+    display: none;
+  }
+  .displaymiddle {
+    display: block;
+  }
+}
+@media screen and (max-width: 1016px) {
+  h1 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 1.6em;
+  }
+  .featurestxt {
+    font-size: 1.8em
+  }
+  .mainsection {
+    height: 596px;
+  }
+  .features {
+    margin-top: 596px;
+  }
+  // .mainimage{
+  //     margin-top: 88px;
+  // }
+  .logo {
+    margin-top: 4.8em;
+  }
+  .logotype {
+    margin-top: 6em;
+    margin-bottom: 2.8em;
+  }
+}
+@media screen and (max-width: 804px) {
+  .widthcontrol {
+    max-width: 193px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .mainsection {
+    height: 590px;
+  }
+  .features {
+    margin-top: 590px;
+  }
+}
+@media screen and (max-width: 789px) {
+  .mainsection {
+    height: 590px;
+  }
+  .features {
+    margin-top: 575px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .mainsection {
+    position: relative;
+    height: auto;
+  }
+  .mainimage {
+    position: relative;
+    margin-top: 72px;
+  }
+  .features {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 650px) {
+  .logo, .logotype {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1, p {
+    text-align: center;
+  }
+  .centerbtn {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .widthcontrol {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 310px;
+  }
+  .hidephone {
+    display: none !important;
+  }
+  .hidedisplay {
+    display: block !important;
+  }
+  .logo {
+    margin-top: 2.4em;
+  }
+  .logotype {
+    margin-top: 3.6em;
+    margin-bottom: 1.8em;
+  }
+  .phoneimage {
+    margin-bottom: 2.4em;
+  }
+  p {
+    line-height: 135%;
+  }
+  .copyright {
+    font-size: 1.2em;
+  }
+  .featurebox {
+    margin-top: 55px;
+    margin-bottom: 60px;
+  }
+  .footerlogo {
+      margin: 60px auto 18px auto;
+  }
+}
